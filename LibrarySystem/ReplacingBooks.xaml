@@ -1,0 +1,38 @@
+﻿<Window x:Class="LibrarySystem.ReplacingBooks"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LibrarySystem"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+         TextElement.FontWeight="Regular"
+         TextElement.FontSize="13"
+         TextOptions.TextFormattingMode="Ideal"
+         TextOptions.TextRenderingMode="Auto"
+         Background="{DynamicResource MaterialDesignPaper}"
+         FontFamily="{DynamicResource MaterialDesignFont}"
+        Title="ReplacingBooks" Height="450" Width="800" Loaded="Window_Loaded">
+    <Grid>
+            <ListView x:Name="lstSortedList" Width="311" d:ItemsSource="{d:SampleData ItemCount=5}" Height="310" DockPanel.Dock="Right" Drop="lstSortedList_Drop" Margin="489,62,0,62">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <ListView x:Name="lstAvailableBooks" Width="311" d:ItemsSource="{d:SampleData ItemCount=5}" Height="310" DockPanel.Dock="Left" DragLeave="lstAvailableBooks_DragLeave" Margin="10,78,479,46">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <Label Content="Replace books" Width="345" DockPanel.Dock="Top" Height="74" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="#DD1008B7" FontSize="36" Margin="240,-1,215,361" />
+            <Button x:Name="btnRight" Content="Right" Width="Auto" Margin="356,122,356,264" RenderTransformOrigin="4.439,4.791" Click="btnRight_Click"/>
+        <Button x:Name="btnLeft" Content="Left" Width="Auto" Margin="356,172,356,230" RenderTransformOrigin="4.439,4.791" Click="btnLeft_Click"/>
+        <Button x:Name="btnUp" Content="Up" Width="Auto" Margin="356,213,356,189" RenderTransformOrigin="4.439,4.791" Click="btnUp_Click"/>
+        <Button x:Name="btnDown" Content="Down" Width="Auto" Margin="356,254,356,148" RenderTransformOrigin="4.439,4.791" Click="btnDown_Click"/>
+    </Grid>
+</Window>

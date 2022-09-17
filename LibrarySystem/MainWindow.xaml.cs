@@ -29,5 +29,11 @@ namespace LibrarySystem
         {
 
         }
+
+        private void btnReplaceBooks_Click(object sender, RoutedEventArgs e)
+        {
+            ReplacingBooks frmReplaceBooks = new ReplacingBooks();
+            frmReplaceBooks.ShowDialog();
+        }
     }
 }
