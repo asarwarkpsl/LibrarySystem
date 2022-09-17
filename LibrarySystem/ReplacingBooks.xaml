@@ -30,12 +30,14 @@
             </ListView.View>
         </ListView>
         <Label Content="Replace books" Width="345" DockPanel.Dock="Top" Height="74" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="#DD1008B7" FontSize="36" Margin="256,0,256,595" />
-        <Button x:Name="btnRight" Content="Right" Width="Auto" Margin="356,144,356,493" RenderTransformOrigin="4.439,4.791" Click="btnRight_Click"/>
-        <Button x:Name="btnLeft" Content="Left" Width="Auto" Margin="356,186,356,451" RenderTransformOrigin="4.439,4.791" Click="btnLeft_Click"/>
-        <Button x:Name="btnUp" Content="Up" Width="Auto" Margin="356,227,356,410" RenderTransformOrigin="4.439,4.791" Click="btnUp_Click"/>
-        <Button x:Name="btnDown" Content="Down" Width="Auto" Margin="356,268,356,369" RenderTransformOrigin="4.439,4.791" Click="btnDown_Click"/>
-        <Button x:Name="btnClose" Content="Close" Width="Auto" Margin="674,594,38,43" RenderTransformOrigin="4.439,4.791" Click="btnClose_Click"/>
-        <Button x:Name="btnValidate" Content="Verify Sorting" Width="Auto" Margin="518,594,194,43" RenderTransformOrigin="4.439,4.791" Click="btnValidate_Click"/>
-        <Button x:Name="btnReset" Content="Reset" Width="Auto" Margin="39,594,673,43" RenderTransformOrigin="4.439,4.791" Click="btnReset_Click"/>
+        
+        <Button x:Name="btnRight" Content="Right" Width="Auto" Height="55" Margin="356,116,356,498" RenderTransformOrigin="4.439,4.791" Click="btnRight_Click"/>
+        <Button x:Name="btnLeft" Content="Left" Width="Auto" Height="55" Margin="356,193,356,421" RenderTransformOrigin="4.439,4.791" Click="btnLeft_Click"/>
+        <Button x:Name="btnUp" Content="Up" Width="Auto" Height="55" Margin="355,253,357,361" RenderTransformOrigin="4.439,4.791" Click="btnUp_Click"/>
+        <Button x:Name="btnDown" Content="Down" Width="Auto" Height="55" Margin="356,335,356,279" RenderTransformOrigin="4.439,4.791" Click="btnDown_Click"/>
+        <Button x:Name="btnClose" Content="Close" Width="Auto" Height="55" Margin="674,572,38,42" RenderTransformOrigin="4.439,4.791" Click="btnClose_Click"/>
+        <Button x:Name="btnValidate" Content="Verify Sorting" Width="Auto" Height="55" Margin="499,571,189,43" RenderTransformOrigin="4.439,4.791" Click="btnValidate_Click"/>
+        <Button x:Name="btnReset" Content="Reset" Width="Auto" Height="55" Click="btnReset_Click" Margin="39,572,625,42" RenderTransformOrigin="0.483,1.443" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+       
     </Grid>
 </Window>
