@@ -20,25 +20,14 @@ namespace LibrarySystem
     public partial class ReplacingBooks : Window
     {
         List<string> userSortedList = new List<string>();
+        List<string> sortedList = new List<string>();
 
         public ReplacingBooks()
         {
             InitializeComponent();
         }
 
-        private void lstAvailableBooks_DragLeave(object sender, DragEventArgs e)
-        {
-            //Do nothing
-        }
-
-        private void lstSortedList_Drop(object sender, DragEventArgs e)
-        {
-            //Add to the sorted list, check sorted (in accesnding order) validation
-
-            userSortedList.Add("A");
-
-        }
-
+      
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             //Generate 10 different call numbers, store them in the list
@@ -54,7 +43,7 @@ namespace LibrarySystem
 
             }
 
-            List<string> sortedList = callNumbers.ToList();
+            sortedList = callNumbers.ToList();
             sortedList.Sort();
 
             lstAvailableBooks.ItemsSource = callNumbers;
@@ -168,6 +157,26 @@ namespace LibrarySystem
                 lstSortedList.ItemsSource = userSortedList;
                 lstSortedList.Items.Refresh();
             }
+        }
+
+        private void btnReset_Click(object sender, RoutedEventArgs e)
+        {
+            lstSortedList.ItemsSource = null;
+            lstSortedList.Items.Refresh();
+        }
+
+        private void btnClose_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnValidate_Click(object sender, RoutedEventArgs e)
+        {
+            if (userSortedList.SequenceEqual(sortedList))
+                MessageBox.Show("Greate work done");
+            else
+                MessageBox.Show("Try Again");
+
         }
     }
 }

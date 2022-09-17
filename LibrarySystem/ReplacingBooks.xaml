@@ -13,26 +13,29 @@
          TextOptions.TextRenderingMode="Auto"
          Background="{DynamicResource MaterialDesignPaper}"
          FontFamily="{DynamicResource MaterialDesignFont}"
-        Title="ReplacingBooks" Height="450" Width="800" Loaded="Window_Loaded">
+        Title="ReplacingBooks" Height="685" Width="858" Loaded="Window_Loaded">
     <Grid>
-            <ListView x:Name="lstSortedList" Width="311" d:ItemsSource="{d:SampleData ItemCount=5}" Height="310" DockPanel.Dock="Right" Drop="lstSortedList_Drop" Margin="489,62,0,62">
-                <ListView.View>
-                    <GridView>
-                        <GridViewColumn/>
-                    </GridView>
-                </ListView.View>
-            </ListView>
-            <ListView x:Name="lstAvailableBooks" Width="311" d:ItemsSource="{d:SampleData ItemCount=5}" Height="310" DockPanel.Dock="Left" DragLeave="lstAvailableBooks_DragLeave" Margin="10,78,479,46">
-                <ListView.View>
-                    <GridView>
-                        <GridViewColumn/>
-                    </GridView>
-                </ListView.View>
-            </ListView>
-            <Label Content="Replace books" Width="345" DockPanel.Dock="Top" Height="74" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="#DD1008B7" FontSize="36" Margin="240,-1,215,361" />
-            <Button x:Name="btnRight" Content="Right" Width="Auto" Margin="356,122,356,264" RenderTransformOrigin="4.439,4.791" Click="btnRight_Click"/>
-        <Button x:Name="btnLeft" Content="Left" Width="Auto" Margin="356,172,356,230" RenderTransformOrigin="4.439,4.791" Click="btnLeft_Click"/>
-        <Button x:Name="btnUp" Content="Up" Width="Auto" Margin="356,213,356,189" RenderTransformOrigin="4.439,4.791" Click="btnUp_Click"/>
-        <Button x:Name="btnDown" Content="Down" Width="Auto" Margin="356,254,356,148" RenderTransformOrigin="4.439,4.791" Click="btnDown_Click"/>
+        <ListView x:Name="lstSortedList" Width="311" d:ItemsSource="{d:SampleData ItemCount=5}" DockPanel.Dock="Right" Margin="518,87,29,141">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <ListView x:Name="lstAvailableBooks" Width="311" d:ItemsSource="{d:SampleData ItemCount=5}" DockPanel.Dock="Left" Margin="39,103,508,218">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Label Content="Replace books" Width="345" DockPanel.Dock="Top" Height="74" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="#DD1008B7" FontSize="36" Margin="256,0,256,595" />
+        <Button x:Name="btnRight" Content="Right" Width="Auto" Margin="356,144,356,493" RenderTransformOrigin="4.439,4.791" Click="btnRight_Click"/>
+        <Button x:Name="btnLeft" Content="Left" Width="Auto" Margin="356,186,356,451" RenderTransformOrigin="4.439,4.791" Click="btnLeft_Click"/>
+        <Button x:Name="btnUp" Content="Up" Width="Auto" Margin="356,227,356,410" RenderTransformOrigin="4.439,4.791" Click="btnUp_Click"/>
+        <Button x:Name="btnDown" Content="Down" Width="Auto" Margin="356,268,356,369" RenderTransformOrigin="4.439,4.791" Click="btnDown_Click"/>
+        <Button x:Name="btnClose" Content="Close" Width="Auto" Margin="674,594,38,43" RenderTransformOrigin="4.439,4.791" Click="btnClose_Click"/>
+        <Button x:Name="btnValidate" Content="Verify Sorting" Width="Auto" Margin="518,594,194,43" RenderTransformOrigin="4.439,4.791" Click="btnValidate_Click"/>
+        <Button x:Name="btnReset" Content="Reset" Width="Auto" Margin="39,594,673,43" RenderTransformOrigin="4.439,4.791" Click="btnReset_Click"/>
     </Grid>
 </Window>
