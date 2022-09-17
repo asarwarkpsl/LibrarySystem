@@ -37,7 +37,7 @@
         <Button x:Name="btnDown" Content="Down" Width="Auto" Height="55" Margin="356,335,356,279" RenderTransformOrigin="4.439,4.791" Click="btnDown_Click"/>
         <Button x:Name="btnClose" Content="Close" Width="Auto" Height="55" Margin="674,572,38,42" RenderTransformOrigin="4.439,4.791" Click="btnClose_Click"/>
         <Button x:Name="btnValidate" Content="Verify Sorting" Width="Auto" Height="55" Margin="499,571,189,43" RenderTransformOrigin="4.439,4.791" Click="btnValidate_Click"/>
-        <Button x:Name="btnReset" Content="Reset" Width="Auto" Height="55" Click="btnReset_Click" Margin="39,572,625,42" RenderTransformOrigin="0.483,1.443" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+        <Button x:Name="btnReset" Content="Try Again" Width="Auto" Height="55" Click="btnReset_Click" Margin="39,572,625,42" RenderTransformOrigin="0.483,1.443" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
        
     </Grid>
 </Window>

@@ -64,9 +64,16 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="IdentifyAreas.xaml.cs">
+      <DependentUpon>IdentifyAreas.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ReplacingBooks.xaml.cs">
       <DependentUpon>ReplacingBooks.xaml</DependentUpon>
     </Compile>
+    <Page Include="IdentifyAreas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

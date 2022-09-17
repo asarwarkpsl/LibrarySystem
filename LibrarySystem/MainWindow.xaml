@@ -27,7 +27,7 @@
             </ListView.View>
             <Button Width="172" Content="Dashboard"/>
             <Button x:Name="btnReplaceBooks" Cursor="Hand" Content="Replace Books" Width="171" Click="btnReplaceBooks_Click"/>
-            <Button Content="Identify Area" Width="168"/>
+            <Button Content="Identify Area" Width="168" Click="Button_Click"/>
             <Button Content="Find call numbers" Width="166"/>
             <Button Content="Logout" Width="165"/>
         </ListView>

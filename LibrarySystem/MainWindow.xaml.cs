@@ -35,5 +35,11 @@ namespace LibrarySystem
             ReplacingBooks frmReplaceBooks = new ReplacingBooks();
             frmReplaceBooks.ShowDialog();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            IdentifyAreas frmIdentifyAreas = new IdentifyAreas();
+            frmIdentifyAreas.ShowDialog();
+        }
     }
 }
