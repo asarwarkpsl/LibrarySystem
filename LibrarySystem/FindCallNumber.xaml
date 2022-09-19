@@ -5,8 +5,32 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LibrarySystem"
         mc:Ignorable="d"
-        Title="FindCallNumber" Height="450" Width="800">
-    <Grid>
-        
+         MaxWidth="898" MaxHeight="672"
+        WindowStartupLocation = "CenterScreen"
+        ResizeMode="NoResize"
+        Title="Challange CallNumber" Height="672" Width="898">
+    <Grid Height="644" VerticalAlignment="Top">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="285*"/>
+            <ColumnDefinition Width="164*"/>
+        </Grid.ColumnDefinitions>
+        <Canvas Grid.ColumnSpan="2">
+            <Label x:Name="lblQuestion" Content="Label" Canvas.Left="39" Canvas.Top="32" FontSize="22"/>
+            <ListView x:Name="lstOptions" Height="404" Width="896" d:ItemsSource="{d:SampleData ItemCount=5}" HorizontalAlignment="Center" Canvas.Top="99" VerticalAlignment="Top">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <Button x:Name="btnNextQuestion" Content="Next Question" Width="Auto" Height="73" RenderTransformOrigin="4.439,4.791" VerticalAlignment="Center" Canvas.Left="626" Canvas.Top="554" HorizontalAlignment="Left" Click="btnNextQuestion_Click"/>
+
+
+            <Button x:Name="btnReset" Content="Try Again" Width="Auto" Height="65" RenderTransformOrigin="0.483,1.443" VerticalAlignment="Top" Canvas.Left="39" Canvas.Top="562" Click="btnReset_Click"/>
+            <Button x:Name="btnVerifyAns" Content="Verify" Width="115" Height="73" RenderTransformOrigin="4.439,4.791" VerticalAlignment="Center" Canvas.Left="758" Canvas.Top="554" HorizontalAlignment="Left" Click="btnVerifyAns_Click"/>
+            <Button x:Name="btnPreviousQuestion" Content="Previous Question" Width="Auto" Height="73" RenderTransformOrigin="4.439,4.791" Click="btnPreviousQuestion_Click" Canvas.Left="473" Canvas.Top="554" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <Button x:Name="btnPreviousQuestion_Copy" Content="Previous Question" Width="Auto" Height="73" RenderTransformOrigin="4.439,4.791" Click="btnPreviousQuestion_Click" Canvas.Left="473" Canvas.Top="554" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Canvas>
+
     </Grid>
 </Window>

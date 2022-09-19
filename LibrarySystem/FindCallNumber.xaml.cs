@@ -22,6 +22,8 @@ namespace LibrarySystem
     public partial class FindCallNumber : Window
     {
         List<deweyData> data = null;
+        List<QuizQuestion> allQuestions;
+        int questionIndex = 0;
 
         Dictionary<string, string> deweyAreas = new Dictionary<string, string>()
                                                     {
@@ -41,6 +43,7 @@ namespace LibrarySystem
             InitializeComponent();
             loadFile();
             LoadQuestions();
+            LoadNextQuestion();
         }
 
         private void loadFile()
@@ -72,13 +75,32 @@ namespace LibrarySystem
             //}
         }
 
+        private void LoadNextQuestion()
+        {
+            if (allQuestions == null) return;
+
+            QuizQuestion q = allQuestions[questionIndex];
+            lblQuestion.Tag = q.QuestionCode;
+
+            lblQuestion.Content = $"The Call Number: {q.QuestionCode} belongs to which main category ?";
+
+            lstOptions.Items.Clear();
+
+            foreach (var v in q.QuestOptions)
+            {
+                RadioButton opt = new RadioButton();
+                opt.Content = v;
+
+                lstOptions.Items.Add(opt);
+            }
+        }
         private void LoadQuestions()
         {
             // var shufflednames = leadScore.OrderBy(a => Guid.NewGuid()).ToList();
             var books = from d in data
                         select d.books;
 
-             var shufflebooks = books.OrderBy(a => Guid.NewGuid()).ToList();
+            var shufflebooks = books.OrderBy(a => Guid.NewGuid()).ToList();
 
             List<QuizQuestion> quizQuestions = new List<QuizQuestion>();
 
@@ -100,7 +122,7 @@ namespace LibrarySystem
 
                 QuizQuestion question = new QuizQuestion();
 
-                question.Code = bookCode;
+                question.QuestionCode = categoryCode.ToString();
                 question.QuestOptions = new List<string>();
                 question.QuestOptions.Add(questOption);
 
@@ -129,7 +151,69 @@ namespace LibrarySystem
 
                 //var shuffleOptions = question.QuestOptions.OrderBy(a => Guid.NewGuid()).ToList();
                 question.QuestOptions = question.QuestOptions.OrderBy(a => Guid.NewGuid()).ToList();
+
+                if (allQuestions == null)
+                    allQuestions = new List<QuizQuestion>();
+
+                allQuestions.Add(question);
             }
+        }
+
+        private void btnPreviousQuestion_Click(object sender, RoutedEventArgs e)
+        {
+            if (questionIndex <= 0) return;
+
+            --questionIndex;
+
+            LoadNextQuestion();
+        }
+
+        private void btnNextQuestion_Click(object sender, RoutedEventArgs e)
+        {
+            if (questionIndex == allQuestions.Count-1) return;
+
+            ++questionIndex;
+
+           
+
+
+            LoadNextQuestion();
+        }
+
+        private void btnVerifyAns_Click(object sender, RoutedEventArgs e)
+        {
+            bool isOptCheck = false;
+
+            foreach (var v in lstOptions.Items)
+            {
+                RadioButton opt = v as RadioButton;
+
+                if (opt.IsChecked == false) continue;
+
+                isOptCheck = true;
+
+                string selectedOptCatCode = opt.Content.ToString();
+
+                if (!selectedOptCatCode.Substring(0, selectedOptCatCode.IndexOf(' ')).Equals(lblQuestion.Tag.ToString()))
+                    opt.Background = Brushes.Red;
+                else
+                    opt.Background = Brushes.LightGreen;
+
+                break;
+            }
+
+            if(isOptCheck != true)
+            {
+                CustomMessageBox msgBox = new CustomMessageBox("Select any answere to verify", MessageType.Error, MessageButtons.Ok);
+                msgBox.ShowDialog();
+            }
+        }
+
+        private void btnReset_Click(object sender, RoutedEventArgs e)
+        {
+            questionIndex = 0;
+
+            LoadNextQuestion();
         }
     }
 
@@ -148,7 +232,7 @@ namespace LibrarySystem
 
     public class QuizQuestion
     {
-        public string  Code{ get; set; }
+        public string  QuestionCode{ get; set; }
         public List<string> QuestOptions{ get; set; }
     }
 }
