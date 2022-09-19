@@ -13,31 +13,51 @@
          TextOptions.TextRenderingMode="Auto"
          Background="{DynamicResource MaterialDesignPaper}"
          FontFamily="{DynamicResource MaterialDesignFont}"
-        Title="ReplacingBooks" Height="685" Width="858" Loaded="Window_Loaded">
-    <Grid>
-        <ListView x:Name="lstSortedList" Width="311" d:ItemsSource="{d:SampleData ItemCount=5}" DockPanel.Dock="Right" Margin="518,87,29,141">
+        Title="Replace Books" Height="685" Width="858" Loaded="Window_Loaded">
+    <Grid Margin="0,2,0,-2">
+        <ListView x:Name="lstSortedList"  Width="320" d:ItemsSource="{d:SampleData ItemCount=5}" DockPanel.Dock="Right" Margin="535,151,22,105">
             <ListView.View>
                 <GridView>
                     <GridViewColumn/>
                 </GridView>
             </ListView.View>
         </ListView>
-        <ListView x:Name="lstAvailableBooks" Width="311" d:ItemsSource="{d:SampleData ItemCount=5}" DockPanel.Dock="Left" Margin="39,103,508,218">
+        <ListView x:Name="lstAvailableBooks" Width="320" d:ItemsSource="{d:SampleData ItemCount=5}" DockPanel.Dock="Left" Margin="5,151,542,105">
             <ListView.View>
                 <GridView>
                     <GridViewColumn/>
                 </GridView>
             </ListView.View>
         </ListView>
-        <Label Content="Replace books" Width="345" DockPanel.Dock="Top" Height="74" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="#DD1008B7" FontSize="36" Margin="256,0,256,595" />
-        
-        <Button x:Name="btnRight" Content="Right" Width="Auto" Height="55" Margin="356,116,356,498" RenderTransformOrigin="4.439,4.791" Click="btnRight_Click"/>
-        <Button x:Name="btnLeft" Content="Left" Width="Auto" Height="55" Margin="356,193,356,421" RenderTransformOrigin="4.439,4.791" Click="btnLeft_Click"/>
-        <Button x:Name="btnUp" Content="Up" Width="Auto" Height="55" Margin="355,253,357,361" RenderTransformOrigin="4.439,4.791" Click="btnUp_Click"/>
-        <Button x:Name="btnDown" Content="Down" Width="Auto" Height="55" Margin="356,335,356,279" RenderTransformOrigin="4.439,4.791" Click="btnDown_Click"/>
-        <Button x:Name="btnClose" Content="Close" Width="Auto" Height="55" Margin="674,572,38,42" RenderTransformOrigin="4.439,4.791" Click="btnClose_Click"/>
-        <Button x:Name="btnValidate" Content="Verify Sorting" Width="Auto" Height="55" Margin="499,571,189,43" RenderTransformOrigin="4.439,4.791" Click="btnValidate_Click"/>
-        <Button x:Name="btnReset" Content="Try Again" Width="Auto" Height="55" Click="btnReset_Click" Margin="39,572,625,42" RenderTransformOrigin="0.483,1.443" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
-       
+        <Label x:Name="lblHeading" Content="Replace Books" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="48" Foreground="#DD0E32F1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="0,-8,0,0"/>
+
+        <TextBlock TextWrapping="WrapWithOverflow" FontSize="24" FontStyle="Italic" Margin="10,62,-10,524">
+            Place the Call numbers from left hand list to the right hand list in Sorting order. Press Try again to practice aslong as you want.
+        </TextBlock>
+
+        <Button x:Name="btnRight"  Width="Auto" Height="55" Margin="356,170,356,444" RenderTransformOrigin="4.439,4.791" Click="btnRight_Click">
+            <StackPanel>
+                <Image Source="images\right.png" Height="37"/>
+            </StackPanel>
+        </Button>
+        <Button x:Name="btnLeft" Width="Auto" Height="55" Margin="356,247,356,367" RenderTransformOrigin="4.439,4.791" Click="btnLeft_Click">
+            <StackPanel>
+                <Image Source="images\left.png" Height="37"/>
+            </StackPanel>
+        </Button>
+        <Button x:Name="btnUp" Width="Auto" Height="55" Margin="355,307,357,307" RenderTransformOrigin="4.439,4.791" Click="btnUp_Click">
+            <StackPanel>
+                <Image Source="images\up.png" Height="37"/>
+            </StackPanel>
+        </Button>
+        <Button x:Name="btnDown" Width="Auto" Height="55" Margin="356,389,356,225" RenderTransformOrigin="4.439,4.791" Click="btnDown_Click">
+            <StackPanel>
+                <Image Source="images\down.png" Height="37"/>
+            </StackPanel>
+        </Button>
+        <Button x:Name="btnClose" Content="Close" Width="Auto" Height="55" Margin="674,590,38,24" RenderTransformOrigin="4.439,4.791" Click="btnClose_Click"/>
+        <Button x:Name="btnValidate" Content="Verify Sorting" Width="Auto" Height="55" Margin="499,589,189,25" RenderTransformOrigin="4.439,4.791" Click="btnValidate_Click"/>
+        <Button x:Name="btnReset" Content="Try Again" Width="Auto" Height="55" Click="btnReset_Click" Margin="39,590,625,0" RenderTransformOrigin="0.483,1.443" VerticalAlignment="Top"/>
+
     </Grid>
 </Window>
