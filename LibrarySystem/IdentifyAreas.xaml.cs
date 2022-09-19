@@ -145,7 +145,6 @@ namespace LibrarySystem
                 }
 
                 string d = catDesc.SelectedItem.ToString().Trim();
-                int value = -1;
 
                 if (userMatching.ContainsKey(c))
                 {
@@ -162,7 +161,9 @@ namespace LibrarySystem
 
 
             if (correctMatching.SequenceEqual(userMatching))
-                MessageBox.Show("Greate work done");
+            {
+                  MessageBox.Show("Greate work done");
+            }
             else
                 MessageBox.Show("Try Again");
 
