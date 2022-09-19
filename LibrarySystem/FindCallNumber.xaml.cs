@@ -50,29 +50,9 @@ namespace LibrarySystem
         {
             string fileName = "data.json";
             string jsonString = File.ReadAllText(fileName);
+
+            //byte[] dataf = global::LibrarySystem.Properties.Resources.data;
             data = JsonSerializer.Deserialize<List<deweyData>>(jsonString);
-
-            foreach (var v in data)
-            {
-                foreach (books book in v.books)
-                {
-                    Console.WriteLine($"Summary: {book.code}");
-                    Console.WriteLine($"Summary: {book.name}");
-                }
-            }
-
-
-            //foreach (var v in data)
-            //{
-            //    Console.WriteLine($"Date: {v.code}");
-            //    Console.WriteLine($"TemperatureCelsius: {v.name}");
-
-            //    foreach (books book in v.books)
-            //    {
-            //        Console.WriteLine($"Summary: {book.code}");
-            //        Console.WriteLine($"Summary: {book.name}");
-            //    }
-            //}
         }
 
         private void LoadNextQuestion()
@@ -109,53 +89,55 @@ namespace LibrarySystem
             {
                 List<books> b = shufflebooks[i];
 
-                string bookCode = b.First().code;
+                //  string bookCode = b[i].code;
 
-
-                int categoryCodei = (int)(int.Parse(bookCode)) / 100;
-
-
-                int categoryCode = categoryCodei * 100;
-
-                //Correct option
-                string questOption = $"{categoryCode.ToString()} ( {deweyAreas[categoryCode.ToString()]} )";
-
-                QuizQuestion question = new QuizQuestion();
-
-                question.QuestionCode = categoryCode.ToString();
-                question.QuestOptions = new List<string>();
-                question.QuestOptions.Add(questOption);
-
-
-                //False option
-                for (int ii = 0; ii < 3; ii++)
+                foreach (var bookCode in b)
                 {
+                    int categoryCodei = (int)(int.Parse(bookCode.code)) / 100;
 
-                    do
+
+                    int categoryCode = categoryCodei * 100;
+
+                    //Correct option
+                    string questOption = $"{categoryCode.ToString()} ( {deweyAreas[categoryCode.ToString()]} )";
+
+                    QuizQuestion question = new QuizQuestion();
+
+                    question.QuestionCode = categoryCode.ToString();
+                    question.QuestOptions = new List<string>();
+                    question.QuestOptions.Add(questOption);
+
+
+                    //False option
+                    for (int ii = 0; ii < 3; ii++)
                     {
-                        Random rand = new Random();
 
-                        int c = rand.Next(0, 10);
+                        do
+                        {
+                            Random rand = new Random();
 
-                        categoryCodei = c;
+                            int c = rand.Next(0, 10);
 
-                        categoryCode = categoryCodei * 100;
+                            categoryCodei = c;
+
+                            categoryCode = categoryCodei * 100;
+                        }
+                        while (question.QuestOptions.Any(cc => cc.ToString().Contains(categoryCode.ToString())));
+
+                        questOption = $"{categoryCode.ToString()} ( {deweyAreas[categoryCode.ToString()]} )";
+
+                        question.QuestOptions.Add(questOption);
+
                     }
-                    while (question.QuestOptions.Any(cc => cc.ToString().Contains(categoryCode.ToString())));
 
-                    questOption = $"{categoryCode.ToString()} ( {deweyAreas[categoryCode.ToString()]} )";
+                    //var shuffleOptions = question.QuestOptions.OrderBy(a => Guid.NewGuid()).ToList();
+                    question.QuestOptions = question.QuestOptions.OrderBy(a => Guid.NewGuid()).ToList();
 
-                    question.QuestOptions.Add(questOption);                  
+                    if (allQuestions == null)
+                        allQuestions = new List<QuizQuestion>();
 
+                    allQuestions.Add(question);
                 }
-
-                //var shuffleOptions = question.QuestOptions.OrderBy(a => Guid.NewGuid()).ToList();
-                question.QuestOptions = question.QuestOptions.OrderBy(a => Guid.NewGuid()).ToList();
-
-                if (allQuestions == null)
-                    allQuestions = new List<QuizQuestion>();
-
-                allQuestions.Add(question);
             }
         }
 

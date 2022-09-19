@@ -1,0 +1,142 @@
+[
+	{
+		"code": "210",
+		"name": "General statistics",
+		"books": [
+			{
+				"code": "213",
+				"name": "Not assigned or no longer used"
+			},
+			{
+				"code": "214",
+				"name": "General statistics Of Europe"
+			}
+		]
+	},
+	{
+		"code": "300",
+		"name": "Social sciences",
+		"books": [
+			{
+				"code": "307",
+				"name": "Communities"
+			},
+			{
+				"code": "304",
+				"name": "Factors affecting social behavior"
+			}
+		]
+	},
+	{
+		"code": "360",
+		"name": "Social services",
+		"books": [
+			{
+				"code": "363",
+				"name": " Other social problems & services"
+			},
+			{
+				"code": "364",
+				"name": "Criminology "
+			}
+		]
+	},
+	{
+		"code": "350",
+		"name": "Public administration",
+		"books": [
+			{
+				"code": "351",
+				"name": "Of central governments "
+			},
+			{
+				"code": "357",
+				"name": "Mounted forces & warfare "
+			}
+		]
+	},
+	{
+		"code": "370",
+		"name": "Education",
+		"books": [
+			{
+				"code": "374",
+				"name": "Adult education"
+			},
+			{
+				"code": "376",
+				"name": "Education of women"
+			}
+		]
+	},
+	{
+		"code": "320",
+		"name": "Political science",
+		"books": [
+			{
+				"code": "323",
+				"name": "Civil & political rights"
+			},
+			{
+				"code": "325",
+				"name": "International migration & colonization"
+			}
+		]
+	},
+	{
+		"code": "380",
+		"name": "Commerce, communications, transport",
+		"books": [
+			{
+				"code": "382",
+				"name": "International commerce"
+			},
+			{
+				"code": "383",
+				"name": "Postal communication"
+			}
+		]
+	},
+	{
+		"code": "390",
+		"name": "Customs, etiquette, folklore",
+		"books": [
+			{
+				"code": "392",
+				"name": "Customs of life cycle & domestic life"
+			},
+			{
+				"code": "398",
+				"name": "Folklore"
+			}
+		]
+	},
+	{
+		"code": "340",
+		"name": "Law",
+		"books": [
+			{
+				"code": "349",
+				"name": "Law of specific jurisdictions"
+			},
+			{
+				"code": "348",
+				"name": "Law (Statutes)"
+			}
+		]
+	},
+	{
+		"code": "330",
+		"name": "Economics",
+		"books": [
+			{
+				"code": "337",
+				"name": " International economics"
+			},
+			{
+				"code": "338",
+				"name": "Production "
+			}
+		]
+	}
+]
