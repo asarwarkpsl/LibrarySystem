@@ -124,14 +124,15 @@ namespace LibrarySystem
         {
             Dictionary<string, string> userMatching = new Dictionary<string, string>();
             Dictionary<string, string> correctMatching = new Dictionary<string, string>();
-
+            CustomMessageBox msgBox = null;
 
             for (int i = 0; i < 4; i++)
             {
                 ComboBox cat = lstCategories.Items[i] as ComboBox;
                 if (cat.SelectedIndex == 0)
                 {
-                    MessageBox.Show("select category");
+                    msgBox = new CustomMessageBox("Please Select all category description", MessageType.Error, MessageButtons.Ok);
+                    msgBox.ShowDialog();
                     return;
                 }
                 string c = cat.SelectedItem.ToString().Trim();
@@ -140,15 +141,19 @@ namespace LibrarySystem
 
                 if(catDesc.SelectedIndex == 0)
                 {
-                    MessageBox.Show("select description");
+                    msgBox = new CustomMessageBox("Please Select descriptions to all Call numbers", MessageType.Error, MessageButtons.Ok);
+                    msgBox.ShowDialog();
                     return;
                 }
 
                 string d = catDesc.SelectedItem.ToString().Trim();
 
+               
+
                 if (userMatching.ContainsKey(c))
                 {
-                    MessageBox.Show("multiple keys");
+                    msgBox = new CustomMessageBox("Please Select all Call numbers", MessageType.Error, MessageButtons.Ok);
+                    msgBox.ShowDialog();
                     return;
                 }
                 userMatching.Add(c, d);
@@ -158,14 +163,18 @@ namespace LibrarySystem
                 correctMatching.Add(c, deweyAreas[c]);
             }
 
-
+            //CustomMessageBox msgBox = null;
 
             if (correctMatching.SequenceEqual(userMatching))
-            {
-                  MessageBox.Show("Greate work done");
+            { 
+                msgBox = new CustomMessageBox("Greate Work Done!", MessageType.Success, MessageButtons.Ok);
+                msgBox.ShowDialog();
             }
             else
-                MessageBox.Show("Try Again");
+            { 
+                msgBox = new CustomMessageBox("Try Again!", MessageType.Error, MessageButtons.Ok);
+                msgBox.ShowDialog();
+            }
 
         }
     }

@@ -13,47 +13,36 @@
          TextOptions.TextRenderingMode="Auto"
          Background="{DynamicResource MaterialDesignPaper}"
          FontFamily="{DynamicResource MaterialDesignFont}"
-        Title="Library System" Height="450" Width="800">
+         WindowStartupLocation = "CenterScreen"
+         MaxWidth="800" MaxHeight="450"
+         ResizeMode="NoResize"
+        Title="Library System" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid RenderTransformOrigin="0.557,0.282">
         <Grid.RowDefinitions>
-            <RowDefinition Height="166*"/>
-            <RowDefinition Height="253*"/>
+            <RowDefinition Height="172*"/>
+            <RowDefinition Height="139*"/>
+            <RowDefinition Height="123*"/>
         </Grid.RowDefinitions>
-        <ListView HorizontalAlignment="Left" Height="399" Margin="10,10,0,0" VerticalAlignment="Top" Width="211" Grid.RowSpan="2">
+        <ListView HorizontalAlignment="Left" Height="399" Margin="10,10,0,0" VerticalAlignment="Top" Width="211" Grid.RowSpan="3">
             <ListView.View>
                 <GridView>
                     <GridViewColumn/>
                 </GridView>
             </ListView.View>
-            <Button Width="172" Content="Dashboard"/>
-            <Button x:Name="btnReplaceBooks" Cursor="Hand" Content="Replace Books" Width="171" Click="btnReplaceBooks_Click"/>
-            <Button Content="Identify Area" Width="168" Click="Button_Click"/>
-            <Button Content="Find call numbers" Width="166"/>
-            <Button Content="Logout" Width="165"/>
+            <Button Width="165" Content="Dashboard"/>
+            <Button x:Name="btnReplaceBooks" Cursor="Hand" Content="Replace Books" Width="165" Click="btnReplaceBooks_Click"/>
+            <Button Content="Identify Area" Width="165" Click="Button_Click"/>
+            <Button Content="Find call numbers" Width="165" Click="Button_Click_2"/>
+            <Button Content="Logout" Width="165" Click="Button_Click_1"/>
         </ListView>
         <Image HorizontalAlignment="Left" Height="100" Margin="666,22,0,0" VerticalAlignment="Top" Width="100" Stretch="Fill" Source="applicant.png"/>
-        <Label Content="Total Points" HorizontalAlignment="Left" Margin="272,35,0,0" VerticalAlignment="Top" FontSize="10" Foreground="#DD2411E0" Height="20" Width="59"/>
-        <Label Content="1530" HorizontalAlignment="Left" Margin="301,55,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.269,-0.074" FontSize="24" Foreground="#DDE42F2F" Height="37" Width="60"/>
-        <Label Content="New Points" HorizontalAlignment="Left" Margin="407,34,0,0" VerticalAlignment="Top" FontSize="10" Foreground="#DD2411E0" Height="20" Width="57"/>
-        <Label Content="110" HorizontalAlignment="Left" Margin="436,54,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.269,-0.074" FontSize="24" Foreground="#DDE42F2F" Height="37" Width="47"/>
-        <Label Content="Progress" HorizontalAlignment="Left" Margin="534,34,0,0" VerticalAlignment="Top" FontSize="10" Foreground="#DD2411E0" Height="20" Width="46"/>
-        <Label Content="112" HorizontalAlignment="Left" Margin="563,54,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.269,-0.074" FontSize="24" Foreground="#DD20EE16" Height="37" Width="47"/>
+        <Label Content="Total Points" HorizontalAlignment="Left" Margin="272,35,0,0" VerticalAlignment="Top" FontSize="10" Foreground="#DD2411E0" Height="20" Width="75"/>
+        <Label x:Name="lblTotal" Content="1530" HorizontalAlignment="Left" Margin="301,55,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.269,-0.074" FontSize="24" Foreground="#DDE42F2F" Height="37" Width="60"/>
+        <Label Content="New Points" HorizontalAlignment="Left" Margin="407,34,0,0" VerticalAlignment="Top" FontSize="10" Foreground="#DD2411E0" Height="20" Width="64"/>
+        <Label x:Name="lblNew" Content="110" HorizontalAlignment="Left" Margin="436,54,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.269,-0.074" FontSize="24" Foreground="#DDE42F2F" Height="37" Width="47"/>
+        <Label Content="Progress" HorizontalAlignment="Left" Margin="534,34,0,0" VerticalAlignment="Top" FontSize="10" Foreground="#DD2411E0" Height="20" Width="52"/>
+        <Label x:Name="lblProgress" Content="112" HorizontalAlignment="Left" Margin="563,54,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.269,-0.074" FontSize="24" Foreground="#DD20EE16" Height="37" Width="47"/>
         <Label Content="Lead Board" HorizontalAlignment="Left" Margin="393,130,0,0" VerticalAlignment="Top" Height="46" Foreground="#DD0B69F0" FontSize="36" Grid.RowSpan="2"/>
-        <ListBox HorizontalAlignment="Left" Height="233" Margin="237,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="545">
-            <ListBoxItem Content=" 1 - Guest                                                                                                                          2260
-                         " Background="#FF7795E6"/>
-            <ListBoxItem Content=" 2 - You                                                                                                                            1980
-                         " Background="#FF7795E6"/>
-            <ListBoxItem Content=" 3 - Ivory                                                                                                                          1850
-                         " Background="#FF7795E6"/>
-            <ListBoxItem Content=" 4 - Ivan                                                                                                                           1225
-                         " Background="#FF7795E6"/>
-            <ListBoxItem Content=" 5 - Aksana                                                                                                                       1185
-                         " Background="#FF7795E6"/>
-            <ListBoxItem Content=" 6 - Guest                                                                                                                         1000
-                         " Background="#FF7795E6"/>
-            <ListBoxItem Content=" 7 - Igor Yakovich                                                                                                              998
-                         " Background="#FF7795E6"/>
-        </ListBox>
+        <ListBox x:Name="lstLeadBoard" d:ItemsSource="{d:SampleData ItemCount=5}" Grid.RowSpan="3" Margin="242,172,0,0"/>
     </Grid>
 </Window>

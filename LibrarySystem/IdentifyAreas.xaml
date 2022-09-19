@@ -6,30 +6,33 @@
         xmlns:local="clr-namespace:LibrarySystem"
         mc:Ignorable="d"
         Loaded="Window_Loaded"
-        Title="Identify Call Number to Areas" Height="762" Width="898">
+        MaxWidth="900" MaxHeight="762"
+        WindowStartupLocation = "CenterScreen"
+        ResizeMode="NoResize"
+        Title="Identify Call Number to Areas" Height="762" Width="900">
     <Grid>
-        <ListView x:Name="lstCategories" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,166,579,190" RenderTransformOrigin="0.566,0.651">
+        <ListView x:Name="lstCategories" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="32,166,547,190" RenderTransformOrigin="0.566,0.651">
             <ListView.View>
                 <GridView>
                     <GridViewColumn/>
                 </GridView>
             </ListView.View>
         </ListView>
-        <ListView x:Name="lstDescriptions" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="564,166,15,190" RenderTransformOrigin="0.566,0.651">
+        <ListView x:Name="lstDescriptions" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="526,166,53,190" RenderTransformOrigin="0.566,0.651">
             <ListView.View>
                 <GridView>
                     <GridViewColumn/>
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button x:Name="btnValidate" Content="Verify Sorting" Width="Auto" Height="55" Margin="546,637,182,54" RenderTransformOrigin="4.439,4.791" Click="btnValidate_Click"/>
-        <Button x:Name="btnReset" Content="Try Again" Width="Auto" Height="55" Click="btnReset_Click" Margin="62,641,642,0" RenderTransformOrigin="0.483,1.443" VerticalAlignment="Top"/>
-        <Label x:Name="lblHeading" Content="Identify Areas" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="48" Foreground="#DD0E32F1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="0,-8,0,0"/>
+        <Button x:Name="btnValidate" Content="Verify Sorting" Width="Auto" Height="73" Margin="522,624,206,0" RenderTransformOrigin="4.439,4.791" Click="btnValidate_Click" VerticalAlignment="Top"/>
+        <Button x:Name="btnReset" Content="Try Again" Width="Auto" Height="65" Click="btnReset_Click" Margin="32,632,672,0" RenderTransformOrigin="0.483,1.443" VerticalAlignment="Top"/>
+        <Label x:Name="lblHeading" Content="Identify Areas" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="36" Foreground="#DD0E32F1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="0,-8,0,0"/>
 
-        <TextBlock TextWrapping="WrapWithOverflow" FontSize="24" FontStyle="Italic" Margin="10,62,-10,617">
+        <TextBlock TextWrapping="WrapWithOverflow" FontSize="22" FontStyle="Italic" Margin="10,62,10,0" VerticalAlignment="Top" Height="99">
             Match the top level call numbers, from the left hand list, with their correspounding descriptions in the right hand list. Press Try Again to practice aslong as you want.
         </TextBlock>
-        <Button x:Name="btnClose" Content="Close" Width="Auto" Height="55" Margin="724,637,28,54" RenderTransformOrigin="4.439,4.791" Click="btnClose_Click"/>
+        <Button x:Name="btnClose" Content="Close" Width="Auto" Height="73" Margin="712,624,40,0" RenderTransformOrigin="4.439,4.791" Click="btnClose_Click" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

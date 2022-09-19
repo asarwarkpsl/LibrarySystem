@@ -34,7 +34,7 @@ namespace LibrarySystem
 
             List<string> callNumbers = new List<string>();
 
-            while(callNumbers.Count <= 10)
+            while(callNumbers.Count < 10)
             {
                 string str = generateRandomCallNumbers();
 
@@ -172,11 +172,25 @@ namespace LibrarySystem
 
         private void btnValidate_Click(object sender, RoutedEventArgs e)
         {
-            if (userSortedList.SequenceEqual(sortedList))
-                MessageBox.Show("Greate work done");
-            else
-                MessageBox.Show("Try Again");
+            CustomMessageBox msgBox = null;
 
+            if(userSortedList.Count == 0 ||userSortedList.Count < lstAvailableBooks.Items.Count)
+            {
+                msgBox = new CustomMessageBox("Please sort all numbers to Validate", MessageType.Info, MessageButtons.Ok);
+                msgBox.ShowDialog();
+                return;
+            }
+
+            if (userSortedList.SequenceEqual(sortedList))
+            {
+                msgBox = new CustomMessageBox("Greate Work Done!", MessageType.Success, MessageButtons.Ok);
+                msgBox.ShowDialog();
+            }
+            else
+            { 
+                msgBox = new CustomMessageBox("Try Again!", MessageType.Error, MessageButtons.Ok);
+                msgBox.ShowDialog();
+            }
         }
     }
 }

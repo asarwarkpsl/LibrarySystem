@@ -13,41 +13,44 @@
          TextOptions.TextRenderingMode="Auto"
          Background="{DynamicResource MaterialDesignPaper}"
          FontFamily="{DynamicResource MaterialDesignFont}"
+         WindowStartupLocation = "CenterScreen"
+         ResizeMode="NoResize"
+         MaxHeight="685" MaxWidth="858"        
         Title="Replace Books" Height="685" Width="858" Loaded="Window_Loaded">
     <Grid Margin="0,2,0,-2">
-        <ListView x:Name="lstSortedList"  Width="320" d:ItemsSource="{d:SampleData ItemCount=5}" DockPanel.Dock="Right" Margin="535,151,22,105">
+        <ListView x:Name="lstSortedList" d:ItemsSource="{d:SampleData ItemCount=5}" DockPanel.Dock="Right" Margin="535,122,78,105">
             <ListView.View>
                 <GridView>
                     <GridViewColumn/>
                 </GridView>
             </ListView.View>
         </ListView>
-        <ListView x:Name="lstAvailableBooks" Width="320" d:ItemsSource="{d:SampleData ItemCount=5}" DockPanel.Dock="Left" Margin="5,151,542,105">
+        <ListView x:Name="lstAvailableBooks" d:ItemsSource="{d:SampleData ItemCount=5}" DockPanel.Dock="Left" Margin="47,122,567,105">
             <ListView.View>
                 <GridView>
                     <GridViewColumn/>
                 </GridView>
             </ListView.View>
         </ListView>
-        <Label x:Name="lblHeading" Content="Replace Books" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="48" Foreground="#DD0E32F1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="0,-8,0,0"/>
+        <Label x:Name="lblHeading" Content="Replace Books" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="24" Foreground="#DD0E32F1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="0,-8,0,0"/>
 
-        <TextBlock TextWrapping="WrapWithOverflow" FontSize="24" FontStyle="Italic" Margin="10,62,-10,524">
+        <TextBlock TextWrapping="WrapWithOverflow" FontSize="20" FontStyle="Italic" Margin="10,34,10,547">
             Place the Call numbers from left hand list to the right hand list in Sorting order. Press Try again to practice aslong as you want.
         </TextBlock>
 
         <Button x:Name="btnRight"  Width="Auto" Height="55" Margin="356,170,356,444" RenderTransformOrigin="4.439,4.791" Click="btnRight_Click">
             <StackPanel>
-                <Image Source="images\right.png" Height="37"/>
+                <Image Source="images\right.png"  Stretch="Fill" StretchDirection="Both" Height="42" Width="90" />
             </StackPanel>
         </Button>
         <Button x:Name="btnLeft" Width="Auto" Height="55" Margin="356,247,356,367" RenderTransformOrigin="4.439,4.791" Click="btnLeft_Click">
             <StackPanel>
-                <Image Source="images\left.png" Height="37"/>
+                <Image Source="images\left.jpg" Height="37"/>
             </StackPanel>
         </Button>
         <Button x:Name="btnUp" Width="Auto" Height="55" Margin="355,307,357,307" RenderTransformOrigin="4.439,4.791" Click="btnUp_Click">
             <StackPanel>
-                <Image Source="images\up.png" Height="37"/>
+                <Image Source="images\up.jpg" Height="37"/>
             </StackPanel>
         </Button>
         <Button x:Name="btnDown" Width="Auto" Height="55" Margin="356,389,356,225" RenderTransformOrigin="4.439,4.791" Click="btnDown_Click">
@@ -55,9 +58,11 @@
                 <Image Source="images\down.png" Height="37"/>
             </StackPanel>
         </Button>
-        <Button x:Name="btnClose" Content="Close" Width="Auto" Height="55" Margin="674,590,38,24" RenderTransformOrigin="4.439,4.791" Click="btnClose_Click"/>
-        <Button x:Name="btnValidate" Content="Verify Sorting" Width="Auto" Height="55" Margin="499,589,189,25" RenderTransformOrigin="4.439,4.791" Click="btnValidate_Click"/>
-        <Button x:Name="btnReset" Content="Try Again" Width="Auto" Height="55" Click="btnReset_Click" Margin="39,590,625,0" RenderTransformOrigin="0.483,1.443" VerticalAlignment="Top"/>
+        <Button x:Name="btnClose" Content="Close" Width="Auto" Height="55" Margin="674,582,38,0" RenderTransformOrigin="4.439,4.791" Click="btnClose_Click" VerticalAlignment="Top"/>
+        <Button x:Name="btnValidate" Content="Verify Sorting" Width="Auto" Height="55" Margin="499,583,189,0" RenderTransformOrigin="4.439,4.791" Click="btnValidate_Click" VerticalAlignment="Top"/>
+        <Button x:Name="btnReset" Content="Try Again" Width="Auto" Height="55" Click="btnReset_Click" Margin="39,584,625,0" RenderTransformOrigin="0.483,1.443" VerticalAlignment="Top"/>
+        <Label Content="Unsorted Call Numbers" HorizontalAlignment="Left" Margin="101,122,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Sorted Call Numbers" HorizontalAlignment="Left" Margin="591,122,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
 
     </Grid>
 </Window>
