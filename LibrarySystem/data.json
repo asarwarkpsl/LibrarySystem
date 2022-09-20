@@ -1,14 +1,14 @@
 [
 	{
-		"code": "210",
+		"code": "310",
 		"name": "General statistics",
 		"books": [
 			{
-				"code": "213",
+				"code": "313",
 				"name": "Not assigned or no longer used"
 			},
 			{
-				"code": "214",
+				"code": "314",
 				"name": "General statistics Of Europe"
 			}
 		]
@@ -136,6 +136,141 @@
 			{
 				"code": "338",
 				"name": "Production "
+			}
+		]
+	},
+	{
+		"json": null,
+		"code": "000",
+		"name": "Generalities",
+		"books": [
+			{
+				"code": "006",
+				"name": "Special computer methods"
+			},
+			{
+				"code": "005",
+				"name": "Computer programming, programs, data"
+			}
+		]
+	},
+	{
+		"code": "010",
+		"name": "Bibliography",
+		"books": [
+			{
+				"code": "013",
+				"name": "Bibliographies of works by specific classes of authors"
+			},
+			{
+				"code": "015",
+				"name": "Bibliographies of works from specific places"
+			}
+		]
+	},
+	{
+		"code": "020",
+		"name": "Library & information sciences",
+		"books": [
+			{
+				"code": "023",
+				"name": " Personnel administration"
+			},
+			{
+				"code": "025",
+				"name": "Library operations"
+			}
+		]
+	},
+	{
+		"code": "030",
+		"name": "General encyclopedic works",
+		"books": [
+			{
+				"code": "038",
+				"name": "General encyclopedic works in Scandinavian languages"
+			},
+			{
+				"code": "039",
+				"name": "General encyclopedic works in other languages"
+			}
+		]
+	},
+	{
+		"code": "050",
+		"name": "General serials & their indexes",
+		"books": [
+			{
+				"code": "052",
+				"name": "General serials & their indexes In English"
+			},
+			{
+				"code": "054",
+				"name": "General serials & their indexes In French, Provencal, Catalan"
+			},
+			{
+				"code": "057",
+				"name": "General serials & their indexes In Slavic languages"
+			},
+			{
+				"code": "059",
+				"name": "General serials & their indexes In other languages"
+			}
+		]
+	},
+	{
+		"code": "060",
+		"name": "General organization & museology",
+		"books": [
+			{
+				"code": "062",
+				"name": "General organization & museology In British Isles In England "
+			},
+			{
+				"code": "065",
+				"name": "General organization & museology In Italy & adjacent territories"
+			}
+		]
+	},
+	{
+		"code": "100",
+		"name": "Philosophy & psychology",
+		"books": [
+			{
+				"code": "108",
+				"name": "Kinds of persons in philosophy"
+			},
+			{
+				"code": "109",
+				"name": "Historical treatment of philosophy"
+			}
+		]
+	},
+	{
+		"code": "150",
+		"name": "Psychology",
+		"books": [
+			{
+				"code": "155",
+				"name": "Differential & developmental psychology"
+			},
+			{
+				"code": "156",
+				"name": "Comparative psychology"
+			}
+		]
+	},
+	{
+		"code": "170",
+		"name": "Ethics (Moral philosophy)",
+		"books": [
+			{
+				"code": "172",
+				"name": "Political ethics"
+			},
+			{
+				"code": "176",
+				"name": "Ethics of sex & reproduction"
 			}
 		]
 	}

@@ -38,25 +38,17 @@
             Place the Call numbers from left hand list to the right hand list in Sorting order. Press Try again to practice aslong as you want.
         </TextBlock>
 
-        <Button x:Name="btnRight"  Width="Auto" Height="55" Margin="356,170,356,444" RenderTransformOrigin="4.439,4.791" Click="btnRight_Click">
-            <StackPanel>
-                <Image Source="images\right.png"  Stretch="Fill" StretchDirection="Both" Height="42" Width="90" />
-            </StackPanel>
+        <Button x:Name="btnRight" Content= "&#x25BA;" Width="Auto" Height="55" Margin="356,170,356,444" RenderTransformOrigin="4.439,4.791" Click="btnRight_Click" FontSize="36" FontStyle="Normal" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top">
+
         </Button>
-        <Button x:Name="btnLeft" Width="Auto" Height="55" Margin="356,247,356,367" RenderTransformOrigin="4.439,4.791" Click="btnLeft_Click">
-            <StackPanel>
-                <Image Source="images\left.jpg" Height="37"/>
-            </StackPanel>
+        <Button x:Name="btnLeft" Content= "&#x25C4;" Width="Auto" Height="55" Margin="0,233,0,381" RenderTransformOrigin="4.439,4.791" Click="btnLeft_Click" HorizontalAlignment="Center" FontSize="36">
+
         </Button>
-        <Button x:Name="btnUp" Width="Auto" Height="55" Margin="355,307,357,307" RenderTransformOrigin="4.439,4.791" Click="btnUp_Click">
-            <StackPanel>
-                <Image Source="images\up.jpg" Height="37"/>
-            </StackPanel>
+        <Button x:Name="btnUp" Content= "&#x25B2;" Width="Auto" Height="55" Margin="0,295,0,319" RenderTransformOrigin="4.439,4.791" Click="btnUp_Click" HorizontalAlignment="Center" FontSize="36" FontWeight="Bold">
+
         </Button>
-        <Button x:Name="btnDown" Width="Auto" Height="55" Margin="356,389,356,225" RenderTransformOrigin="4.439,4.791" Click="btnDown_Click">
-            <StackPanel>
-                <Image Source="images\down.png" Height="37"/>
-            </StackPanel>
+        <Button x:Name="btnDown" Content= "&#x25BC;" Width="Auto" Height="55" Margin="0,357,0,0" RenderTransformOrigin="4.439,4.791" Click="btnDown_Click" HorizontalAlignment="Center" FontSize="36" VerticalAlignment="Top">
+
         </Button>
         <Button x:Name="btnClose" Content="Close" Width="Auto" Height="55" Margin="674,582,38,0" RenderTransformOrigin="4.439,4.791" Click="btnClose_Click" VerticalAlignment="Top"/>
         <Button x:Name="btnValidate" Content="Verify Sorting" Width="Auto" Height="55" Margin="499,583,189,0" RenderTransformOrigin="4.439,4.791" Click="btnValidate_Click" VerticalAlignment="Top"/>
