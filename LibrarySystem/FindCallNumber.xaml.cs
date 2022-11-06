@@ -62,7 +62,7 @@ namespace LibrarySystem
             QuizQuestion q = allQuestions[questionIndex];
             lblQuestion.Tag = q.QuestionCode;
 
-            lblQuestion.Content = $"The Call Number: {q.QuestionCode} belongs to which main category ?";
+            lblQuestion.Content = $"The Call Number: {q.QuestionCode.PadRight(3, '0')} belongs to which main category ?";
 
             lstOptions.Items.Clear();
 
@@ -99,7 +99,7 @@ namespace LibrarySystem
                     int categoryCode = categoryCodei * 100;
 
                     //Correct option
-                    string questOption = $"{categoryCode.ToString()} ( {deweyAreas[categoryCode.ToString()]} )";
+                    string questOption = $"{categoryCode.ToString().PadRight(3, '0')} ( {deweyAreas[categoryCode.ToString().PadRight(3,'0')]} )";
 
                     QuizQuestion question = new QuizQuestion();
 

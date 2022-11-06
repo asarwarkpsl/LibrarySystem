@@ -1,0 +1,277 @@
+[
+	{
+		"code": "310",
+		"name": "General statistics",
+		"books": [
+			{
+				"code": "313",
+				"name": "Not assigned or no longer used"
+			},
+			{
+				"code": "314",
+				"name": "General statistics Of Europe"
+			}
+		]
+	},
+	{
+		"code": "300",
+		"name": "Social sciences",
+		"books": [
+			{
+				"code": "307",
+				"name": "Communities"
+			},
+			{
+				"code": "304",
+				"name": "Factors affecting social behavior"
+			}
+		]
+	},
+	{
+		"code": "360",
+		"name": "Social services",
+		"books": [
+			{
+				"code": "363",
+				"name": " Other social problems & services"
+			},
+			{
+				"code": "364",
+				"name": "Criminology "
+			}
+		]
+	},
+	{
+		"code": "350",
+		"name": "Public administration",
+		"books": [
+			{
+				"code": "351",
+				"name": "Of central governments "
+			},
+			{
+				"code": "357",
+				"name": "Mounted forces & warfare "
+			}
+		]
+	},
+	{
+		"code": "370",
+		"name": "Education",
+		"books": [
+			{
+				"code": "374",
+				"name": "Adult education"
+			},
+			{
+				"code": "376",
+				"name": "Education of women"
+			}
+		]
+	},
+	{
+		"code": "320",
+		"name": "Political science",
+		"books": [
+			{
+				"code": "323",
+				"name": "Civil & political rights"
+			},
+			{
+				"code": "325",
+				"name": "International migration & colonization"
+			}
+		]
+	},
+	{
+		"code": "380",
+		"name": "Commerce, communications, transport",
+		"books": [
+			{
+				"code": "382",
+				"name": "International commerce"
+			},
+			{
+				"code": "383",
+				"name": "Postal communication"
+			}
+		]
+	},
+	{
+		"code": "390",
+		"name": "Customs, etiquette, folklore",
+		"books": [
+			{
+				"code": "392",
+				"name": "Customs of life cycle & domestic life"
+			},
+			{
+				"code": "398",
+				"name": "Folklore"
+			}
+		]
+	},
+	{
+		"code": "340",
+		"name": "Law",
+		"books": [
+			{
+				"code": "349",
+				"name": "Law of specific jurisdictions"
+			},
+			{
+				"code": "348",
+				"name": "Law (Statutes)"
+			}
+		]
+	},
+	{
+		"code": "330",
+		"name": "Economics",
+		"books": [
+			{
+				"code": "337",
+				"name": " International economics"
+			},
+			{
+				"code": "338",
+				"name": "Production "
+			}
+		]
+	},
+	{
+		"json": null,
+		"code": "000",
+		"name": "Generalities",
+		"books": [
+			{
+				"code": "006",
+				"name": "Special computer methods"
+			},
+			{
+				"code": "005",
+				"name": "Computer programming, programs, data"
+			}
+		]
+	},
+	{
+		"code": "010",
+		"name": "Bibliography",
+		"books": [
+			{
+				"code": "013",
+				"name": "Bibliographies of works by specific classes of authors"
+			},
+			{
+				"code": "015",
+				"name": "Bibliographies of works from specific places"
+			}
+		]
+	},
+	{
+		"code": "020",
+		"name": "Library & information sciences",
+		"books": [
+			{
+				"code": "023",
+				"name": " Personnel administration"
+			},
+			{
+				"code": "025",
+				"name": "Library operations"
+			}
+		]
+	},
+	{
+		"code": "030",
+		"name": "General encyclopedic works",
+		"books": [
+			{
+				"code": "038",
+				"name": "General encyclopedic works in Scandinavian languages"
+			},
+			{
+				"code": "039",
+				"name": "General encyclopedic works in other languages"
+			}
+		]
+	},
+	{
+		"code": "050",
+		"name": "General serials & their indexes",
+		"books": [
+			{
+				"code": "052",
+				"name": "General serials & their indexes In English"
+			},
+			{
+				"code": "054",
+				"name": "General serials & their indexes In French, Provencal, Catalan"
+			},
+			{
+				"code": "057",
+				"name": "General serials & their indexes In Slavic languages"
+			},
+			{
+				"code": "059",
+				"name": "General serials & their indexes In other languages"
+			}
+		]
+	},
+	{
+		"code": "060",
+		"name": "General organization & museology",
+		"books": [
+			{
+				"code": "062",
+				"name": "General organization & museology In British Isles In England "
+			},
+			{
+				"code": "065",
+				"name": "General organization & museology In Italy & adjacent territories"
+			}
+		]
+	},
+	{
+		"code": "100",
+		"name": "Philosophy & psychology",
+		"books": [
+			{
+				"code": "108",
+				"name": "Kinds of persons in philosophy"
+			},
+			{
+				"code": "109",
+				"name": "Historical treatment of philosophy"
+			}
+		]
+	},
+	{
+		"code": "150",
+		"name": "Psychology",
+		"books": [
+			{
+				"code": "155",
+				"name": "Differential & developmental psychology"
+			},
+			{
+				"code": "156",
+				"name": "Comparative psychology"
+			}
+		]
+	},
+	{
+		"code": "170",
+		"name": "Ethics (Moral philosophy)",
+		"books": [
+			{
+				"code": "172",
+				"name": "Political ethics"
+			},
+			{
+				"code": "176",
+				"name": "Ethics of sex & reproduction"
+			}
+		]
+	}
+]

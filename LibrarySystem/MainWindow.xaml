@@ -30,8 +30,8 @@
                 </GridView>
             </ListView.View>
             <Button Width="165" Content="Dashboard"/>
-            <Button x:Name="btnReplaceBooks" Cursor="Hand" Content="Replace Books" Width="165" Click="btnReplaceBooks_Click"/>
-            <Button Content="Identify Area" Width="165" Click="Button_Click"/>
+            <Button x:Name="btnReplaceBooks" Cursor="Hand" Content="Replace Books" Width="165" Click="btnReplaceBooks_Click" IsEnabled="False"/>
+            <Button Content="Identify Area" Width="165" Click="Button_Click" IsEnabled="False"/>
             <Button Content="Find call numbers" Width="165" Click="Button_Click_2"/>
             <Button Content="Logout" Width="165" Click="Button_Click_1"/>
         </ListView>
